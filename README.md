@@ -1,0 +1,2 @@
+- All assets come from Itch.io and are free
+- Compilation requires Raylib 5.0+, see raylib.com for details

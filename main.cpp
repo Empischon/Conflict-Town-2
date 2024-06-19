@@ -186,7 +186,7 @@ int main(void)
                 enemies.back().collision.y = enemies.back().position.y+50;
                 enemies.back().redirection_timer = (rand() % 60) + 40;
                 enemies.back().reload_timer = (rand() % 100) + 100;
-                printf("Enemy added at %f %f velocity %f %f direction %i\n", enemies.back().position.x, enemies.back().position.y, enemies.back().velocity.x, enemies.back().velocity.y, enemies.back().direction);
+                //printf("Enemy added at %f %f velocity %f %f direction %i\n", enemies.back().position.x, enemies.back().position.y, enemies.back().velocity.x, enemies.back().velocity.y, enemies.back().direction);
               }
               temp_flag = true;
             }
@@ -210,7 +210,7 @@ int main(void)
           }
           if (enemy.position.x < 10 or enemy.position.x > 640 or enemy.position.y < 10 or enemy.position.y > 440)
           {
-            printf("Early redirection triggered at %f %f\n", enemy.position.x, enemy.position.y);
+            //printf("Early redirection triggered at %f %f\n", enemy.position.x, enemy.position.y);
             enemy.redirection_timer = 0;
           }
         
@@ -245,7 +245,7 @@ int main(void)
             enemy.velocity = direction_to_vel(enemy.direction);
             enemy.velocity.x *= 3.0f;
             enemy.velocity.y *= 3.0f;
-            printf("position %f %f new direction: %i, new velocity %f %f\n",  enemy.position.x, enemy.position.y, enemy.direction, enemy.velocity.x, enemy.velocity.y);
+            //printf("position %f %f new direction: %i, new velocity %f %f\n",  enemy.position.x, enemy.position.y, enemy.direction, enemy.velocity.x, enemy.velocity.y);
             enemy.redirection_timer = (rand() % 60) + 50;
           }
           
